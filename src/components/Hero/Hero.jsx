@@ -36,7 +36,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900" aria-labelledby="hero-heading">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900 pt-20 md:pt-24 lg:pt-0" aria-labelledby="hero-heading">
       {/* Animated Gradient Mesh Background */}
       <GradientMesh aria-hidden="true" />
 

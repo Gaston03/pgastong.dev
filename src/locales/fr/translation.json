@@ -20,6 +20,8 @@
   "about": {
     "title": "À propos de moi",
     "description": "Je suis un étudiant ingénieur logiciel passionné avec une vaste expérience en développement full-stack, applications mobiles et systèmes de communication en temps réel. Je m'épanouis en résolvant des problèmes complexes et en créant des solutions innovantes qui ont un réel impact.",
+    "paragraph2": "Avec une expérience pratique dans des entreprises comme B-Hitech, Byne Media et Xplicity, j'ai développé une expertise dans la création de plateformes de communication en temps réel, de solutions de publicité numérique et d'outils de développement no-code.",
+    "paragraph3": "Je suis motivé par le défi de transformer des exigences complexes en solutions élégantes et conviviales. Que ce soit pour implémenter des appels vidéo en temps réel avec Agora SDK, intégrer des systèmes de paiement avec Stripe, ou architecturer une infrastructure cloud évolutive avec Firebase et GCP, j'apporte à la fois une profondeur technique et une résolution créative de problèmes à chaque projet.",
     "quickFacts": {
       "title": "Informations rapides",
       "location": "Localisation",
@@ -38,7 +40,62 @@
     "showLess": "Voir moins",
     "achievements": "Réalisations clés",
     "responsibilities": "Responsabilités",
-    "technologies": "Technologies utilisées"
+    "technologies": "Technologies utilisées",
+    "companies": {
+      "bhitech": {
+        "role": "Ingénieur Logiciel",
+        "achievements": [
+          "Développé et déployé un système de communication audio/vidéo en temps réel et un système d'abonnement sécurisé",
+          "Amélioré l'engagement des utilisateurs et soutenu la stratégie de monétisation de l'application"
+        ],
+        "responsibilities": [
+          "Conçu et optimisé les fonctionnalités frontend et backend pour une communication en temps réel évolutive",
+          "Collaboré avec les équipes produit pour améliorer l'expérience utilisateur et assurer une intégration fluide des flux d'abonnement"
+        ]
+      },
+      "bynemedia": {
+        "role": "Développeur Full Stack",
+        "achievements": [
+          "Développé une plateforme de publicité numérique avec gestion de campagnes et intégration de paiement",
+          "Implémenté des mises à jour en temps réel des écrans LED et un système de gestion de contenu",
+          "Créé un tableau de bord administrateur réactif pour l'analyse et le suivi des campagnes"
+        ],
+        "responsibilities": [
+          "Conçu et implémenté des fonctionnalités full-stack pour la plateforme publicitaire",
+          "Intégré des passerelles de paiement et des systèmes de gestion d'abonnement",
+          "Développé une communication en temps réel entre la plateforme web et les écrans LED",
+          "Créé des interfaces utilisateur intuitives pour la création et la gestion de campagnes"
+        ]
+      },
+      "xplicity": {
+        "role": "Développeur Full Stack",
+        "achievements": [
+          "Créé un constructeur de sites web no-code avec automatisation visuelle des flux de travail",
+          "Implémenté un constructeur d'interface glisser-déposer avec aperçu en temps réel",
+          "Développé un module complet de gestion de données pour le contenu dynamique"
+        ],
+        "responsibilities": [
+          "Architecturé et développé les fonctionnalités principales de la plateforme no-code",
+          "Créé un système d'automatisation visuelle des flux de travail pour les processus métier",
+          "Implémenté des modules de gestion de données et d'intégration d'API",
+          "Conçu une interface glisser-déposer intuitive pour les utilisateurs non techniques"
+        ]
+      },
+      "supmti": {
+        "role": "Développeur Mobile",
+        "achievements": [
+          "Développé une application mobile de gestion de stationnement intelligent",
+          "Implémenté le suivi en temps réel de la disponibilité des places de stationnement",
+          "Créé une interface conviviale pour la réservation et le paiement de stationnement"
+        ],
+        "responsibilities": [
+          "Conçu et développé l'application mobile Android de zéro",
+          "Implémenté des API backend utilisant Spring Boot pour la gestion du stationnement",
+          "Intégré des services de localisation en temps réel et des fonctionnalités de cartographie",
+          "Développé l'intégration de paiement pour les réservations de stationnement"
+        ]
+      }
+    }
   },
   "skills": {
     "title": "Compétences & Technologies",
@@ -72,7 +129,64 @@
     "closeModal": "Fermer",
     "features": "Fonctionnalités clés",
     "technologiesUsed": "Technologies utilisées",
-    "company": "Entreprise"
+    "company": "Entreprise",
+    "items": {
+      "rtc": {
+        "title": "Plateforme de Communication en Temps Réel",
+        "description": "Application d'appels audio/vidéo avec système d'abonnement et fonctionnalités de communication en temps réel",
+        "longDescription": "Une plateforme de communication en temps réel complète offrant des appels audio/vidéo de haute qualité alimentés par Agora SDK. L'application comprend un système de gestion d'abonnement sécurisé intégré à Stripe, permettant des stratégies de monétisation. Construite avec Flutter pour une compatibilité multiplateforme, l'application offre une expérience utilisateur fluide avec des fonctionnalités telles que les notifications push, l'authentification des utilisateurs et la synchronisation des données basée sur le cloud via Firebase.",
+        "features": [
+          "Appels audio/vidéo en temps réel en qualité HD",
+          "Gestion sécurisée des abonnements avec intégration Stripe",
+          "Notifications push pour les appels et messages entrants",
+          "Authentification et gestion des profils utilisateurs",
+          "Synchronisation des données basée sur le cloud",
+          "Support multiplateforme (iOS et Android)"
+        ]
+      },
+      "advertising": {
+        "title": "Plateforme de Publicité Numérique",
+        "description": "Plateforme de gestion de campagnes avec intégration de paiement et mises à jour en temps réel des écrans LED",
+        "longDescription": "Une plateforme sophistiquée de publicité numérique qui révolutionne la gestion de la publicité extérieure. Le système comprend un tableau de bord complet de gestion de campagnes construit avec Next.js et React, permettant aux annonceurs de créer, surveiller et optimiser leurs campagnes en temps réel. La plateforme intègre Stripe pour un traitement de paiement transparent et une gestion des abonnements, tout en maintenant une communication en temps réel avec les écrans LED pour des mises à jour instantanées du contenu. Le tableau de bord administrateur réactif fournit des analyses détaillées et des capacités de surveillance pour les performances des campagnes.",
+        "features": [
+          "Tableau de bord de gestion de campagnes avec analyses",
+          "Intégration de passerelle de paiement avec Stripe",
+          "Mises à jour en temps réel du contenu des écrans LED",
+          "Système de gestion de contenu pour les publicités",
+          "Tableau de bord administrateur réactif",
+          "Planification et automatisation des campagnes",
+          "Suivi et reporting des performances"
+        ]
+      },
+      "nocode": {
+        "title": "Constructeur de Sites Web No-Code",
+        "description": "Plateforme d'automatisation visuelle des flux de travail avec constructeur d'interface glisser-déposer et gestion de données",
+        "longDescription": "Une plateforme no-code innovante qui permet aux utilisateurs non techniques de créer des sites web sophistiqués et d'automatiser les flux de travail métier sans écrire de code. La plateforme dispose d'un puissant constructeur d'interface glisser-déposer avec des capacités d'aperçu en temps réel, permettant aux utilisateurs de concevoir et personnaliser leurs sites web visuellement. Le système d'automatisation visuelle des flux de travail permet aux utilisateurs de créer des processus métier complexes via une interface intuitive. Construite avec React pour le frontend et Python/Django pour le backend, la plateforme comprend un module complet de gestion de données pour gérer le contenu dynamique et les intégrations d'API.",
+        "features": [
+          "Constructeur d'interface glisser-déposer avec aperçu en temps réel",
+          "Automatisation visuelle des flux de travail pour les processus métier",
+          "Module complet de gestion de données",
+          "Capacités d'intégration d'API",
+          "Bibliothèque de modèles pour démarrages rapides",
+          "Interface conviviale pour les utilisateurs non techniques",
+          "Gestion de contenu dynamique"
+        ]
+      },
+      "parking": {
+        "title": "Gestion de Stationnement Intelligent",
+        "description": "Application mobile pour la gestion des places de stationnement avec suivi de disponibilité en temps réel",
+        "longDescription": "Une solution de gestion de stationnement intelligent conçue pour simplifier les défis du stationnement urbain. L'application mobile Android fournit un suivi en temps réel de la disponibilité des places de stationnement, permettant aux utilisateurs de trouver et réserver des places de stationnement sans effort. Construite avec Android Studio et Java, l'application dispose d'une interface utilisateur intuitive pour la réservation de stationnement et le traitement des paiements. Le backend, alimenté par Spring Boot, gère les opérations de stationnement et fournit des API RESTful pour une communication transparente. L'intégration avec l'API Google Maps permet des services basés sur la localisation et la navigation vers les places de stationnement réservées.",
+        "features": [
+          "Suivi en temps réel de la disponibilité des places de stationnement",
+          "Système de réservation de stationnement",
+          "Traitement de paiement intégré",
+          "Services basés sur la localisation avec Google Maps",
+          "Navigation vers les places de stationnement réservées",
+          "Interface mobile conviviale",
+          "Notifications push pour les réservations"
+        ]
+      }
+    }
   },
   "education": {
     "title": "Formation",

@@ -20,6 +20,8 @@
   "about": {
     "title": "About Me",
     "description": "I am a passionate Software Engineer student with extensive experience in full-stack development, mobile applications, and real-time communication systems. I thrive on solving complex problems and building innovative solutions that make a real impact.",
+    "paragraph2": "With hands-on experience at companies like B-Hitech, Byne Media, and Xplicity, I've developed expertise in building real-time communication platforms, digital advertising solutions, and no-code development tools.",
+    "paragraph3": "I'm driven by the challenge of transforming complex requirements into elegant, user-friendly solutions. Whether it's implementing real-time video calls with Agora SDK, integrating payment systems with Stripe, or architecting scalable cloud infrastructure with Firebase and GCP, I bring both technical depth and creative problem-solving to every project.",
     "quickFacts": {
       "title": "Quick Facts",
       "location": "Location",
@@ -38,7 +40,62 @@
     "showLess": "Show Less",
     "achievements": "Key Achievements",
     "responsibilities": "Responsibilities",
-    "technologies": "Technologies Used"
+    "technologies": "Technologies Used",
+    "companies": {
+      "bhitech": {
+        "role": "Software Engineer",
+        "achievements": [
+          "Developed and deployed real-time audio/video communication and a secure subscription system",
+          "Enhanced user engagement and supported the app's monetization strategy"
+        ],
+        "responsibilities": [
+          "Designed and optimized frontend and backend features for scalable real-time communication",
+          "Collaborated with product teams to enhance user experience and ensure smooth integration of subscription workflows"
+        ]
+      },
+      "bynemedia": {
+        "role": "Full Stack Developer",
+        "achievements": [
+          "Developed a digital advertising platform with campaign management and payment integration",
+          "Implemented real-time LED screen updates and content management system",
+          "Built responsive admin dashboard for campaign analytics and monitoring"
+        ],
+        "responsibilities": [
+          "Designed and implemented full-stack features for the advertising platform",
+          "Integrated payment gateways and subscription management systems",
+          "Developed real-time communication between web platform and LED displays",
+          "Created intuitive user interfaces for campaign creation and management"
+        ]
+      },
+      "xplicity": {
+        "role": "Full Stack Developer",
+        "achievements": [
+          "Built a no-code website builder with visual workflow automation",
+          "Implemented drag-and-drop UI builder with real-time preview",
+          "Developed comprehensive data management module for dynamic content"
+        ],
+        "responsibilities": [
+          "Architected and developed the no-code platform's core features",
+          "Created visual workflow automation system for business processes",
+          "Implemented data management and API integration modules",
+          "Designed intuitive drag-and-drop interface for non-technical users"
+        ]
+      },
+      "supmti": {
+        "role": "Mobile Developer",
+        "achievements": [
+          "Developed smart parking management mobile application",
+          "Implemented real-time parking space availability tracking",
+          "Created user-friendly interface for parking reservation and payment"
+        ],
+        "responsibilities": [
+          "Designed and developed Android mobile application from scratch",
+          "Implemented backend APIs using Spring Boot for parking management",
+          "Integrated real-time location services and mapping features",
+          "Developed payment integration for parking reservations"
+        ]
+      }
+    }
   },
   "skills": {
     "title": "Skills & Technologies",
@@ -72,7 +129,64 @@
     "closeModal": "Close",
     "features": "Key Features",
     "technologiesUsed": "Technologies Used",
-    "company": "Company"
+    "company": "Company",
+    "items": {
+      "rtc": {
+        "title": "Real-Time Communication Platform",
+        "description": "Audio/video calling app with subscription system and real-time communication features",
+        "longDescription": "A comprehensive real-time communication platform featuring high-quality audio/video calls powered by Agora SDK. The application includes a secure subscription management system integrated with Stripe, enabling monetization strategies. Built with Flutter for cross-platform compatibility, the app provides seamless user experience with features like push notifications, user authentication, and cloud-based data synchronization through Firebase.",
+        "features": [
+          "Real-time audio/video calls with HD quality",
+          "Secure subscription management with Stripe integration",
+          "Push notifications for incoming calls and messages",
+          "User authentication and profile management",
+          "Cloud-based data synchronization",
+          "Cross-platform support (iOS & Android)"
+        ]
+      },
+      "advertising": {
+        "title": "Digital Advertising Platform",
+        "description": "Campaign management platform with payment integration and real-time LED screen updates",
+        "longDescription": "A sophisticated digital advertising platform that revolutionizes outdoor advertising management. The system features a comprehensive campaign management dashboard built with Next.js and React, allowing advertisers to create, monitor, and optimize their campaigns in real-time. The platform integrates Stripe for seamless payment processing and subscription management, while maintaining real-time communication with LED display screens for instant content updates. The responsive admin dashboard provides detailed analytics and monitoring capabilities for campaign performance.",
+        "features": [
+          "Campaign management dashboard with analytics",
+          "Payment gateway integration with Stripe",
+          "Real-time LED screen content updates",
+          "Content management system for advertisements",
+          "Responsive admin dashboard",
+          "Campaign scheduling and automation",
+          "Performance tracking and reporting"
+        ]
+      },
+      "nocode": {
+        "title": "No-Code Website Builder",
+        "description": "Visual workflow automation platform with drag-and-drop UI builder and data management",
+        "longDescription": "An innovative no-code platform that empowers non-technical users to build sophisticated websites and automate business workflows without writing code. The platform features a powerful drag-and-drop UI builder with real-time preview capabilities, allowing users to design and customize their websites visually. The visual workflow automation system enables users to create complex business processes through an intuitive interface. Built with React for the frontend and Python/Django for the backend, the platform includes a comprehensive data management module for handling dynamic content and API integrations.",
+        "features": [
+          "Drag-and-drop UI builder with real-time preview",
+          "Visual workflow automation for business processes",
+          "Comprehensive data management module",
+          "API integration capabilities",
+          "Template library for quick starts",
+          "User-friendly interface for non-technical users",
+          "Dynamic content management"
+        ]
+      },
+      "parking": {
+        "title": "Smart Parking Management",
+        "description": "Mobile app for parking space management with real-time availability tracking",
+        "longDescription": "A smart parking management solution designed to simplify urban parking challenges. The Android mobile application provides real-time tracking of parking space availability, allowing users to find and reserve parking spots effortlessly. Built with Android Studio and Java, the app features an intuitive user interface for parking reservation and payment processing. The backend, powered by Spring Boot, manages parking operations and provides RESTful APIs for seamless communication. Integration with Google Maps API enables location-based services and navigation to reserved parking spots.",
+        "features": [
+          "Real-time parking space availability tracking",
+          "Parking reservation system",
+          "Integrated payment processing",
+          "Location-based services with Google Maps",
+          "Navigation to reserved parking spots",
+          "User-friendly mobile interface",
+          "Push notifications for reservations"
+        ]
+      }
+    }
   },
   "education": {
     "title": "Education",

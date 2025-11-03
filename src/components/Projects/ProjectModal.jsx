@@ -158,12 +158,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   id="modal-title"
                   className="text-3xl md:text-4xl font-bold text-white mb-4"
                 >
-                  {project.title}
+                  {t(project.titleKey)}
                 </h2>
 
                 {/* Description */}
                 <p className="text-slate-300 text-lg mb-8 leading-relaxed">
-                  {project.longDescription}
+                  {t(project.longDescriptionKey)}
                 </p>
 
                 {/* Key Features */}
@@ -173,7 +173,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     {t('projects.features')}
                   </h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {project.features.map((feature, index) => (
+                    {t(project.featuresKey, { returnObjects: true }).map((feature, index) => (
                       <motion.li
                         key={index}
                         initial={{ opacity: 0, x: -20 }}

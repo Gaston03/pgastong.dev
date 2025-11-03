@@ -79,10 +79,10 @@ function About() {
                   {t('about.description')}
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-dark-300 leading-relaxed">
-                  With hands-on experience at companies like <span className="text-primary-400 font-semibold">B-Hitech</span>, <span className="text-primary-400 font-semibold">Byne Media</span>, and <span className="text-primary-400 font-semibold">Xplicity</span>, I've developed expertise in building real-time communication platforms, digital advertising solutions, and no-code development tools.
+                  {t('about.paragraph2')}
                 </p>
                 <p className="text-sm sm:text-base md:text-lg text-dark-300 leading-relaxed">
-                  I'm driven by the challenge of transforming complex requirements into elegant, user-friendly solutions. Whether it's implementing real-time video calls with Agora SDK, integrating payment systems with Stripe, or architecting scalable cloud infrastructure with Firebase and GCP, I bring both technical depth and creative problem-solving to every project.
+                  {t('about.paragraph3')}
                 </p>
               </article>
             </motion.div>

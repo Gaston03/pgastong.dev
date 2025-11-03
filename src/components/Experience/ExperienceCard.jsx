@@ -59,7 +59,7 @@ function ExperienceCard({ experience, side }) {
       {/* Role and Duration */}
       <div className="mb-3 sm:mb-4">
         <h4 className="text-base sm:text-lg md:text-xl font-semibold text-white mb-1">
-          {experience.role}
+          {t(experience.roleKey)}
         </h4>
         <p className="text-dark-400 text-xs sm:text-sm">{experience.duration}</p>
       </div>
@@ -70,7 +70,7 @@ function ExperienceCard({ experience, side }) {
           {t('experience.achievements')}
         </h5>
         <ul className="space-y-1.5 sm:space-y-2">
-          {experience.achievements.map((achievement, index) => (
+          {t(experience.achievementsKey, { returnObjects: true }).map((achievement, index) => (
             <li key={index} className="flex items-start">
               <span
                 className="inline-block w-1.5 h-1.5 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"
@@ -97,7 +97,7 @@ function ExperienceCard({ experience, side }) {
             {t('experience.responsibilities')}
           </h5>
           <ul className="space-y-1.5 sm:space-y-2">
-            {experience.responsibilities.map((responsibility, index) => (
+            {t(experience.responsibilitiesKey, { returnObjects: true }).map((responsibility, index) => (
               <li key={index} className="flex items-start">
                 <span
                   className="inline-block w-1.5 h-1.5 rounded-full mt-1.5 sm:mt-2 mr-2 sm:mr-3 flex-shrink-0"

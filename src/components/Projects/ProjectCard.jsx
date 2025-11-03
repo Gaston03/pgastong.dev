@@ -34,7 +34,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
-      aria-label={`View details for ${project.title} project`}
+      aria-label={`View details for ${t(project.titleKey)} project`}
     >
       {/* Project Image */}
       <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden bg-slate-900">
@@ -81,12 +81,12 @@ const ProjectCard = ({ project, onViewDetails }) => {
 
         {/* Title */}
         <h3 className="text-base sm:text-lg md:text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300 line-clamp-2">
-          {project.title}
+          {t(project.titleKey)}
         </h3>
 
         {/* Description */}
         <p className="text-slate-400 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">
-          {project.description}
+          {t(project.descriptionKey)}
         </p>
 
         {/* Technology Tags */}

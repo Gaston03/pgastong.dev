@@ -7,23 +7,17 @@ function ExperienceTimeline() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <div ref={ref} className="relative max-w-6xl mx-auto px-0 sm:px-4">
-      {/* Timeline Line - Hidden on mobile, visible on desktop */}
-      <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500 h-full" />
+    <div ref={ref} className="relative max-w-4xl mx-auto px-0 sm:px-4">
+      {/* Timeline Line - Positioned on the left */}
+      <div className="absolute left-4 sm:left-8 top-0 w-0.5 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500 h-full" />
 
       {/* Experience Cards */}
       <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
         {experiences.map((experience, index) => {
-          const side = index % 2 === 0 ? 'left' : 'right';
-          
           return (
             <div
               key={experience.id}
-              className={`relative flex items-center ${
-                side === 'left'
-                  ? 'md:flex-row-reverse md:justify-end'
-                  : 'md:flex-row md:justify-start'
-              }`}
+              className="relative flex items-start pl-12 sm:pl-20"
             >
               {/* Timeline Dot */}
               <TimelineDot
@@ -33,8 +27,8 @@ function ExperienceTimeline() {
               />
 
               {/* Card Container */}
-              <div className="w-full md:w-[calc(50%-2rem)]">
-                <ExperienceCard experience={experience} side={side} />
+              <div className="w-full">
+                <ExperienceCard experience={experience} side="left" />
               </div>
             </div>
           );
@@ -47,7 +41,7 @@ function ExperienceTimeline() {
 // Timeline Dot Component with pulse animation
 function TimelineDot({ color, isInView, delay }) {
   return (
-    <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center z-10">
+    <div className="absolute left-0 sm:left-4 transform -translate-x-1/2 flex items-center justify-center z-10">
       {/* Outer pulsing ring */}
       <motion.div
         initial={{ scale: 0, opacity: 0 }}
