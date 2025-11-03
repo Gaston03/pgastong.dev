@@ -42,13 +42,22 @@
   },
   "skills": {
     "title": "Compétences & Technologies",
+    "description": "Un aperçu complet de mon expertise technique dans différents domaines",
     "categories": {
       "frontend": "Développement Frontend",
       "backend": "Développement Backend",
       "mobile": "Développement Mobile",
       "cloud": "Cloud & Base de données",
-      "tools": "Outils & DevOps"
+      "tools": "Outils & Technologies"
     },
+    "descriptions": {
+      "frontend": "Création d'interfaces utilisateur réactives et interactives",
+      "backend": "Développement d'applications côté serveur évolutives et d'API",
+      "mobile": "Création d'applications mobiles natives et multiplateformes",
+      "cloud": "Gestion de l'infrastructure cloud et des solutions de stockage de données",
+      "tools": "Outils de développement et plateformes d'intégration"
+    },
+    "technologies": "technologies",
     "proficiency": "Maîtrise",
     "yearsExperience": "ans d'expérience"
   },

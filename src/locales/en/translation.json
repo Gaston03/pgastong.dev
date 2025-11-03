@@ -42,13 +42,22 @@
   },
   "skills": {
     "title": "Skills & Technologies",
+    "description": "A comprehensive overview of my technical expertise across different domains",
     "categories": {
       "frontend": "Frontend Development",
       "backend": "Backend Development",
       "mobile": "Mobile Development",
       "cloud": "Cloud & Database",
-      "tools": "Tools & DevOps"
+      "tools": "Tools & Technologies"
     },
+    "descriptions": {
+      "frontend": "Building responsive and interactive user interfaces",
+      "backend": "Developing scalable server-side applications and APIs",
+      "mobile": "Creating native and cross-platform mobile applications",
+      "cloud": "Managing cloud infrastructure and data storage solutions",
+      "tools": "Development tools and integration platforms"
+    },
+    "technologies": "technologies",
     "proficiency": "Proficiency",
     "yearsExperience": "years experience"
   },
