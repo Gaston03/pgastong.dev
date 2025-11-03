@@ -7,7 +7,7 @@ export const skills = {
       name: "React", 
       icon: "/icons/react.svg", 
       proficiency: 90,
-      experience: "3+ years"
+      experience: "2+ years"
     },
     { 
       id: 2,
@@ -28,28 +28,21 @@ export const skills = {
       name: "Tailwind CSS", 
       icon: "/icons/tailwind.svg", 
       proficiency: 92,
-      experience: "3+ years"
+      experience: "2+ years"
     },
     { 
       id: 5,
       name: "JavaScript", 
       icon: "/icons/javascript.svg", 
       proficiency: 90,
-      experience: "4+ years"
+      experience: "3+ years"
     },
     { 
       id: 6,
       name: "HTML/CSS", 
       icon: "/icons/html.svg", 
       proficiency: 95,
-      experience: "4+ years"
-    },
-    { 
-      id: 7,
-      name: "Redux", 
-      icon: "/icons/redux.svg", 
-      proficiency: 80,
-      experience: "2+ years"
+      experience: "3+ years"
     }
   ],
   backend: [
@@ -68,25 +61,11 @@ export const skills = {
       experience: "2+ years"
     },
     { 
-      id: 10,
-      name: "Node.js", 
-      icon: "/icons/nodejs.svg", 
-      proficiency: 82,
-      experience: "2+ years"
-    },
-    { 
-      id: 11,
-      name: "Django", 
-      icon: "/icons/django.svg", 
-      proficiency: 78,
-      experience: "1+ years"
-    },
-    { 
       id: 12,
       name: "REST APIs", 
       icon: "/icons/api.svg", 
       proficiency: 88,
-      experience: "3+ years"
+      experience: "2+ years"
     },
     { 
       id: 13,
@@ -132,7 +111,7 @@ export const skills = {
       name: "Firebase", 
       icon: "/icons/firebase.svg", 
       proficiency: 90,
-      experience: "3+ years"
+      experience: "2+ years"
     },
     { 
       id: 19,
@@ -169,7 +148,7 @@ export const skills = {
       name: "Git", 
       icon: "/icons/git.svg", 
       proficiency: 90,
-      experience: "4+ years"
+      experience: "3+ years"
     },
     { 
       id: 24,

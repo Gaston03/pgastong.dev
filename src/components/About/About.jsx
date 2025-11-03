@@ -54,34 +54,34 @@ function About() {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-4 py-20 bg-dark-800/50">
+    <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-24 bg-dark-800/50">
       <div className="max-w-7xl mx-auto w-full" ref={ref}>
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="space-y-12"
+          className="space-y-8 sm:space-y-10 md:space-y-12"
         >
           {/* Section Title */}
           <motion.div variants={itemVariants} className="text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               {t('about.title')}
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
           </motion.div>
 
           {/* Split Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Left Side - About Me Text */}
-            <motion.div variants={itemVariants} className="space-y-6">
+            <motion.div variants={itemVariants} className="space-y-4 sm:space-y-6">
               <div className="prose prose-invert max-w-none">
-                <p className="text-lg text-dark-300 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-dark-300 leading-relaxed">
                   {t('about.description')}
                 </p>
-                <p className="text-lg text-dark-300 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-dark-300 leading-relaxed">
                   With hands-on experience at companies like <span className="text-primary-400 font-semibold">B-Hitech</span>, <span className="text-primary-400 font-semibold">Byne Media</span>, and <span className="text-primary-400 font-semibold">Xplicity</span>, I've developed expertise in building real-time communication platforms, digital advertising solutions, and no-code development tools.
                 </p>
-                <p className="text-lg text-dark-300 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg text-dark-300 leading-relaxed">
                   I'm driven by the challenge of transforming complex requirements into elegant, user-friendly solutions. Whether it's implementing real-time video calls with Agora SDK, integrating payment systems with Stripe, or architecting scalable cloud infrastructure with Firebase and GCP, I bring both technical depth and creative problem-solving to every project.
                 </p>
               </div>
@@ -89,30 +89,33 @@ function About() {
 
             {/* Right Side - Quick Facts Cards */}
             <motion.div variants={itemVariants} className="space-y-4">
-              <h3 className="text-2xl font-bold text-white mb-6">
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">
                 {t('about.quickFacts.title')}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {quickFacts.map((fact, index) => (
                   <motion.div
                     key={index}
                     variants={itemVariants}
                     whileHover={{ scale: 1.05, y: -5 }}
+                    whileTap={{ scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="group relative overflow-hidden rounded-xl p-6 backdrop-blur-lg bg-white/5 border border-white/10 hover:border-primary-500/50 transition-all duration-300"
+                    className="group relative overflow-hidden rounded-xl p-4 sm:p-5 md:p-6 backdrop-blur-lg bg-white/5 border border-white/10 hover:border-primary-500/50 transition-all duration-300"
                   >
                     {/* Glassmorphism effect */}
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-500/10 to-secondary-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     
-                    <div className="relative z-10 space-y-3">
-                      <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-primary-500/10 group-hover:bg-primary-500/20 transition-colors duration-300">
-                        {fact.icon}
+                    <div className="relative z-10 space-y-2 sm:space-y-3">
+                      <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary-500/10 group-hover:bg-primary-500/20 transition-colors duration-300">
+                        <div className="text-lg sm:text-xl md:text-2xl text-primary-500">
+                          {fact.icon}
+                        </div>
                       </div>
                       <div>
-                        <p className="text-sm text-dark-400 font-medium mb-1">
+                        <p className="text-xs sm:text-sm text-dark-400 font-medium mb-1">
                           {fact.label}
                         </p>
-                        <p className="text-base text-white font-semibold">
+                        <p className="text-sm sm:text-base text-white font-semibold break-words">
                           {fact.value}
                         </p>
                       </div>

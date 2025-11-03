@@ -7,12 +7,12 @@ function ExperienceTimeline() {
   const [ref, isInView] = useInView({ threshold: 0.1 });
 
   return (
-    <div ref={ref} className="relative max-w-6xl mx-auto px-4">
+    <div ref={ref} className="relative max-w-6xl mx-auto px-0 sm:px-4">
       {/* Timeline Line - Hidden on mobile, visible on desktop */}
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500 h-full" />
 
       {/* Experience Cards */}
-      <div className="space-y-12 md:space-y-16">
+      <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
         {experiences.map((experience, index) => {
           const side = index % 2 === 0 ? 'left' : 'right';
           

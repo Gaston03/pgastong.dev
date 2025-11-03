@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { HiMail, HiUser, HiPencil, HiChatAlt2 } from 'react-icons/hi';
 import emailjs from '@emailjs/browser';
+import LoadingSpinner from '../common/LoadingSpinner';
 
 export default function ContactForm() {
   const { t } = useTranslation();
@@ -173,10 +174,10 @@ export default function ContactForm() {
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={placeholder}
-          className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all ${
+          className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all duration-200 ${
             touched[name] && errors[name]
               ? 'border-red-500 focus:ring-red-500/50'
-              : 'border-dark-700 focus:ring-primary-500/50 focus:border-primary-500'
+              : 'border-dark-700 focus:ring-primary-500/50 focus:border-primary-500 hover:border-dark-600'
           }`}
         />
       </div>
@@ -236,10 +237,10 @@ export default function ContactForm() {
               onBlur={handleBlur}
               placeholder={t('contact.form.messagePlaceholder')}
               rows={5}
-              className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all resize-none ${
+              className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all duration-200 resize-none ${
                 touched.message && errors.message
                   ? 'border-red-500 focus:ring-red-500/50'
-                  : 'border-dark-700 focus:ring-primary-500/50 focus:border-primary-500'
+                  : 'border-dark-700 focus:ring-primary-500/50 focus:border-primary-500 hover:border-dark-600'
               }`}
             />
           </div>
@@ -268,11 +269,7 @@ export default function ContactForm() {
         >
           {isSubmitting ? (
             <>
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
-              />
+              <LoadingSpinner size="sm" color="white" />
               <span>{t('contact.form.sending')}</span>
             </>
           ) : (

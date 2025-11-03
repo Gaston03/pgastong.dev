@@ -63,7 +63,7 @@ export const projects = [
     description: "Mobile app for parking space management with real-time availability tracking",
     longDescription: "A smart parking management solution designed to simplify urban parking challenges. The Android mobile application provides real-time tracking of parking space availability, allowing users to find and reserve parking spots effortlessly. Built with Android Studio and Java, the app features an intuitive user interface for parking reservation and payment processing. The backend, powered by Spring Boot, manages parking operations and provides RESTful APIs for seamless communication. Integration with Google Maps API enables location-based services and navigation to reserved parking spots.",
     image: "/images/projects/smart-parking.svg",
-    technologies: ["Android Studio", "Java", "Spring Boot", "Firebase", "Google Maps API"],
+    technologies: ["Android Studio", "Flutter", "Cloud Functions", "Firebase", "Google Maps API"],
     category: ["mobile", "full-stack"],
     features: [
       "Real-time parking space availability tracking",

@@ -19,8 +19,8 @@ export default function ContactInfo() {
     {
       icon: HiMail,
       label: t('contact.info.email'),
-      value: 'pgastong03@gmail.com',
-      href: 'mailto:pgastong03@gmail.com',
+      value: 'pascal@b-hitech.com',
+      href: 'mailto:pascal@b-hitech.com',
       color: 'text-primary-400'
     },
     {

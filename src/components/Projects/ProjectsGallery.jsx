@@ -57,7 +57,7 @@ const ProjectsGallery = () => {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-32 px-6 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -65,9 +65,9 @@ const ProjectsGallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             {t('projects.title')}
           </h2>
         </motion.div>
@@ -78,13 +78,13 @@ const ProjectsGallery = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12"
+          className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 md:mb-12"
         >
           {projectCategories.map((category) => (
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`px-4 md:px-6 py-2 md:py-3 rounded-full font-medium transition-all duration-300 ${
+              className={`px-3 sm:px-4 md:px-6 py-2 md:py-3 rounded-full text-xs sm:text-sm md:text-base font-medium transition-all duration-300 touch-manipulation ${
                 activeFilter === category.id
                   ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50'
                   : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:text-white'
@@ -103,7 +103,7 @@ const ProjectsGallery = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
           >
             {filteredProjects.map((project) => (
               <motion.div
