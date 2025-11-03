@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function AnimatedText({ text, className = '' }) {
+export default function AnimatedText({ text, className = '', as = 'h1', id }) {
   // Split text into words
   const words = text.split(' ');
 
@@ -35,8 +35,11 @@ export default function AnimatedText({ text, className = '' }) {
     },
   };
 
+  const MotionComponent = motion[as];
+
   return (
-    <motion.h1
+    <MotionComponent
+      id={id}
       className={`gradient-text ${className}`}
       variants={container}
       initial="hidden"
@@ -51,6 +54,6 @@ export default function AnimatedText({ text, className = '' }) {
           {word}
         </motion.span>
       ))}
-    </motion.h1>
+    </MotionComponent>
   );
 }

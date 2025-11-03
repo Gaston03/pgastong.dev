@@ -17,42 +17,53 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark-900">
+      {/* Skip to Content Link for Screen Readers */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-500 focus:text-white focus:rounded-lg focus:shadow-lg"
+      >
+        {t('accessibility.skipToContent', 'Skip to main content')}
+      </a>
+
       {/* Custom Cursor */}
       <CustomCursor />
       
       {/* Scroll Progress Bar */}
-      <ScrollProgress />
+      <ScrollProgress aria-hidden="true" />
       
       {/* Navigation */}
       <Navbar />
       
-      {/* Hero Section */}
-      <Hero />
+      {/* Main Content */}
+      <main id="main-content">
+        {/* Hero Section */}
+        <Hero />
 
-      {/* About Section */}
-      <About />
+        {/* About Section */}
+        <About />
 
-      {/* Experience Section */}
-      <section id="experience" className="min-h-screen py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-12 md:mb-16 text-center">
-            {t('experience.title')}
-          </h2>
-          <ExperienceTimeline />
-        </div>
-      </section>
+        {/* Experience Section */}
+        <section id="experience" className="min-h-screen py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6" aria-labelledby="experience-heading">
+          <div className="max-w-6xl mx-auto">
+            <h2 id="experience-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 sm:mb-12 md:mb-16 text-center">
+              {t('experience.title')}
+            </h2>
+            <ExperienceTimeline />
+          </div>
+        </section>
 
-      {/* Skills Section */}
-      <SkillsGrid />
+        {/* Skills Section */}
+        <SkillsGrid />
 
-      {/* Projects Section */}
-      <ProjectsGallery />
+        {/* Projects Section */}
+        <ProjectsGallery />
 
-      {/* Education Section */}
-      <Education />
+        {/* Education Section */}
+        <Education />
 
-      {/* Contact Section */}
-      <Contact />
+        {/* Contact Section */}
+        <Contact />
+      </main>
 
       {/* Footer */}
       <Footer />

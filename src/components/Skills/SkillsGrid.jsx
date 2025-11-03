@@ -34,7 +34,7 @@ function SkillsGrid() {
   const categories = Object.keys(skills);
 
   return (
-    <section id="skills" className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-24 bg-dark-900/50">
+    <section id="skills" className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20 md:py-24 bg-dark-900/50" aria-labelledby="skills-heading">
       <div className="max-w-7xl mx-auto w-full" ref={ref}>
         <motion.div
           variants={containerVariants}
@@ -44,10 +44,10 @@ function SkillsGrid() {
         >
           {/* Section Title */}
           <motion.div variants={itemVariants} className="text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            <h2 id="skills-heading" className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
               {t('skills.title')}
             </h2>
-            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
+            <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full" aria-hidden="true"></div>
             <p className="text-sm sm:text-base md:text-lg text-dark-300 mt-4 sm:mt-6 max-w-2xl mx-auto px-4">
               {t('skills.description')}
             </p>

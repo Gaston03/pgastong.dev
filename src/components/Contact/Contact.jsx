@@ -7,7 +7,7 @@ export default function Contact() {
   const { t } = useTranslation();
 
   return (
-    <section id="contact" className="section-padding bg-dark-900 px-4 sm:px-6">
+    <section id="contact" className="section-padding bg-dark-900 px-4 sm:px-6" aria-labelledby="contact-heading">
       <div className="section-container">
         {/* Section Header */}
         <motion.div
@@ -17,7 +17,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
-          <h2 className="section-title">
+          <h2 id="contact-heading" className="section-title">
             {t('contact.title')}
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-dark-300 max-w-2xl mx-auto mt-3 sm:mt-4 px-4">

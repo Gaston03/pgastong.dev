@@ -43,21 +43,21 @@ export default function ContactInfo() {
     {
       icon: FaLinkedin,
       label: 'LinkedIn',
-      href: 'https://www.linkedin.com/in/tonguino-gaston-pascal',
+      href: 'https://linkedin.com/in/gaston-pascal-tonguino03',
       color: 'hover:text-[#0A66C2]'
     },
     {
       icon: FaGithub,
       label: 'GitHub',
-      href: 'https://github.com/tonguinogaston',
+      href: 'https://github.com/Gaston03',
       color: 'hover:text-white'
     },
-    {
-      icon: FaTwitter,
-      label: 'Twitter',
-      href: 'https://twitter.com/tonguinogaston',
-      color: 'hover:text-[#1DA1F2]'
-    }
+    // {
+    //   icon: FaTwitter,
+    //   label: 'Twitter',
+    //   href: 'https://twitter.com/tonguinogaston',
+    //   color: 'hover:text-[#1DA1F2]'
+    // }
   ];
 
   const handleDownloadCV = () => {
@@ -93,8 +93,9 @@ export default function ContactInfo() {
                 <a
                   href={detail.href}
                   className="flex items-start gap-4 p-4 rounded-lg bg-dark-800/30 hover:bg-dark-800/50 transition-all duration-300 border border-transparent hover:border-dark-700"
+                  aria-label={`${detail.label}: ${detail.value}`}
                 >
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center ${detail.color} group-hover:scale-110 transition-transform`}>
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center ${detail.color} group-hover:scale-110 transition-transform`} aria-hidden="true">
                     <detail.icon className="w-6 h-6" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -104,7 +105,7 @@ export default function ContactInfo() {
                 </a>
               ) : (
                 <div className="flex items-start gap-4 p-4 rounded-lg bg-dark-800/30">
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center ${detail.color}`}>
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center ${detail.color}`} aria-hidden="true">
                     <detail.icon className="w-6 h-6" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -129,22 +130,22 @@ export default function ContactInfo() {
         <h3 className="text-xl font-bold text-white mb-4">
           {t('contact.info.social')}
         </h3>
-        <div className="flex gap-4">
+        <nav className="flex gap-4" aria-label="Social media profiles">
           {socialLinks.map((social, index) => (
             <motion.a
               key={index}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={social.label}
+              aria-label={`Visit my ${social.label} profile`}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className={`w-12 h-12 rounded-lg bg-dark-800 flex items-center justify-center text-dark-300 transition-colors ${social.color}`}
             >
-              <social.icon className="w-6 h-6" />
+              <social.icon className="w-6 h-6" aria-hidden="true" />
             </motion.a>
           ))}
-        </div>
+        </nav>
       </motion.div>
 
       {/* Download CV Button */}
@@ -159,8 +160,9 @@ export default function ContactInfo() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           className="w-full btn-primary py-4 px-6 rounded-lg font-semibold flex items-center justify-center gap-3"
+          aria-label="Download my CV as PDF"
         >
-          <HiDownload className="w-5 h-5" />
+          <HiDownload className="w-5 h-5" aria-hidden="true" />
           <span>{t('contact.info.downloadCV')}</span>
         </motion.button>
       </motion.div>

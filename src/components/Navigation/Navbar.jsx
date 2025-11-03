@@ -67,25 +67,28 @@ const Navbar = () => {
           ? 'bg-dark-900/80 backdrop-blur-md border-b border-white/10 shadow-lg'
           : 'bg-transparent'
       }`}
+      role="navigation"
+      aria-label="Main navigation"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="flex-shrink-0 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            aria-label="Go to top of page"
           >
             <div className="flex items-center">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
-                <span className="text-white font-bold text-xl">TGP</span>
+                <span className="text-white font-bold text-xl" aria-hidden="true">TGP</span>
               </div>
             </div>
-          </motion.div>
+          </motion.button>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1" role="menubar">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -95,12 +98,16 @@ const Navbar = () => {
                     ? 'text-white'
                     : 'text-dark-300 hover:text-white'
                 }`}
+                role="menuitem"
+                aria-label={`Navigate to ${link.label} section`}
+                aria-current={activeSection === link.id ? 'page' : undefined}
               >
                 {activeSection === link.id && (
                   <motion.div
                     layoutId="activeSection"
                     className="absolute inset-0 bg-white/10 rounded-lg"
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    aria-hidden="true"
                   />
                 )}
                 <span className="relative z-10">{link.label}</span>
@@ -119,9 +126,11 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(true)}
               className="p-2 rounded-lg hover:bg-white/10 transition-colors"
-              aria-label="Open menu"
+              aria-label="Open navigation menu"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-menu"
             >
-              <HiMenu className="w-6 h-6 text-white" />
+              <HiMenu className="w-6 h-6 text-white" aria-hidden="true" />
             </button>
           </div>
         </div>

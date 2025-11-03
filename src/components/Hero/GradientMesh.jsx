@@ -103,9 +103,10 @@ export default function GradientMesh() {
         </g>
       </svg>
 
-      {/* Additional Floating Orbs with Framer Motion */}
+      {/* Additional Floating Orbs with Framer Motion - GPU accelerated */}
       <motion.div
         className="absolute top-1/4 left-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-primary-500/10 rounded-full blur-3xl"
+        style={{ willChange: 'transform, opacity' }}
         animate={{
           y: [0, -30, 0],
           scale: [1, 1.1, 1],
@@ -120,6 +121,7 @@ export default function GradientMesh() {
       
       <motion.div
         className="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-secondary-500/10 rounded-full blur-3xl"
+        style={{ willChange: 'transform, opacity' }}
         animate={{
           y: [0, 30, 0],
           scale: [1, 1.2, 1],

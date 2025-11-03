@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects, projectCategories } from '../../data/projects';
 import ProjectCard from './ProjectCard';
-import ProjectModal from './ProjectModal';
+
+// Lazy load ProjectModal for code splitting
+const ProjectModal = lazy(() => import('./ProjectModal'));
 
 const ProjectsGallery = () => {
   const { t } = useTranslation();
@@ -57,7 +59,7 @@ const ProjectsGallery = () => {
   };
 
   return (
-    <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-slate-900 to-slate-800">
+    <section id="projects" className="py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 bg-gradient-to-b from-slate-900 to-slate-800" aria-labelledby="projects-heading">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -67,7 +69,7 @@ const ProjectsGallery = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 id="projects-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             {t('projects.title')}
           </h2>
         </motion.div>
@@ -79,6 +81,8 @@ const ProjectsGallery = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-10 md:mb-12"
+          role="group"
+          aria-label="Filter projects by category"
         >
           {projectCategories.map((category) => (
             <button
@@ -89,6 +93,8 @@ const ProjectsGallery = () => {
                   ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg shadow-blue-500/50'
                   : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 hover:text-white'
               }`}
+              aria-label={`Filter projects by ${t(`projects.${category.label}`)}`}
+              aria-pressed={activeFilter === category.id}
             >
               {t(`projects.${category.label}`)}
             </button>
@@ -134,12 +140,16 @@ const ProjectsGallery = () => {
         )}
       </div>
 
-      {/* Project Modal */}
-      <ProjectModal
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-      />
+      {/* Project Modal - Lazy loaded with Suspense */}
+      {isModalOpen && (
+        <Suspense fallback={null}>
+          <ProjectModal
+            project={selectedProject}
+            isOpen={isModalOpen}
+            onClose={handleCloseModal}
+          />
+        </Suspense>
+      )}
     </section>
   );
 };

@@ -23,9 +23,11 @@ const LanguageSwitcher = () => {
     <button
       onClick={toggleLanguage}
       className="relative flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300 group"
-      aria-label="Switch language"
+      aria-label={`Switch language to ${currentLanguage === 'en' ? 'French' : 'English'}`}
+      aria-pressed={false}
+      disabled={isAnimating}
     >
-      <div className="relative w-12 h-6 flex items-center">
+      <div className="relative w-12 h-6 flex items-center" aria-hidden="true">
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
           initial={false}

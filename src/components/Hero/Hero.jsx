@@ -36,9 +36,9 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-dark-900" aria-labelledby="hero-heading">
       {/* Animated Gradient Mesh Background */}
-      <GradientMesh />
+      <GradientMesh aria-hidden="true" />
 
       {/* Main Content */}
       <div className="section-container relative z-10 px-4 sm:px-6">
@@ -60,21 +60,23 @@ export default function Hero() {
               {t('hero.greeting')}
             </motion.p>
 
-            {/* Name with Animated Text */}
+            {/* Name with Animated Text - Using h1 for main heading */}
             <AnimatedText 
               text="Tonguino Gaston Pascal"
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-4 leading-tight"
+              as="h1"
+              id="hero-heading"
             />
 
             {/* Title */}
-            <motion.h2
+            <motion.p
               className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-dark-100 mb-4 sm:mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
             >
               {t('hero.title')}
-            </motion.h2>
+            </motion.p>
 
             {/* Description */}
             <motion.p
@@ -107,6 +109,7 @@ export default function Hero() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                aria-label="View my work and projects"
               >
                 {t('hero.cta.viewWork')}
               </motion.button>
@@ -124,6 +127,7 @@ export default function Hero() {
                 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                aria-label="Download my CV as PDF"
               >
                 {t('hero.cta.downloadCV')}
               </motion.button>
@@ -150,7 +154,7 @@ export default function Hero() {
               <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden glass border-4 border-primary-500/30">
                 <ImageWithLoader
                   src="/images/profile.svg"
-                  alt="Tonguino Gaston Pascal"
+                  alt="Profile photo of Tonguino Gaston Pascal, Software Engineer"
                   fallbackSrc="https://via.placeholder.com/400x400/3B82F6/FFFFFF?text=TGP"
                   className="rounded-full"
                 />
@@ -168,6 +172,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
+                aria-hidden="true"
               />
               <motion.div
                 className="hidden sm:block absolute -bottom-4 -left-4 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 border-4 border-secondary-500/50 rounded-full"
@@ -180,6 +185,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "linear"
                 }}
+                aria-hidden="true"
               />
             </div>
           </motion.div>
@@ -187,12 +193,13 @@ export default function Hero() {
       </div>
 
       {/* Scroll Indicator - Hidden on very small screens */}
-      <motion.div
+      <motion.button
         className="hidden sm:flex absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 cursor-pointer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1.5 }}
         onClick={handleScrollDown}
+        aria-label="Scroll down to about section"
       >
         <div className="flex flex-col items-center gap-2">
           <span className="text-xs sm:text-sm text-dark-300">{t('hero.scrollIndicator')}</span>
@@ -206,6 +213,7 @@ export default function Hero() {
               repeat: Infinity,
               ease: "easeInOut"
             }}
+            aria-hidden="true"
           >
             <motion.div
               className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-primary-500 rounded-full"
@@ -220,7 +228,7 @@ export default function Hero() {
             />
           </motion.div>
         </div>
-      </motion.div>
+      </motion.button>
     </section>
   );
 }

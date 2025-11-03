@@ -136,6 +136,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                   onError={(e) => {
                     e.target.style.display = 'none';
                   }}

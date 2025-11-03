@@ -97,6 +97,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, activeSection, onNavigate }) =>
 
           {/* Slide-in Menu */}
           <motion.div
+            id="mobile-menu"
             variants={menuVariants}
             initial="closed"
             animate="open"
@@ -104,29 +105,29 @@ const MobileMenu = ({ isOpen, onClose, navLinks, activeSection, onNavigate }) =>
             className="fixed top-0 right-0 bottom-0 w-full max-w-sm bg-dark-900 z-50 shadow-2xl"
             role="dialog"
             aria-modal="true"
-            aria-label="Mobile navigation menu"
+            aria-labelledby="mobile-menu-title"
           >
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-white/10">
                 <div className="flex items-center">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center" aria-hidden="true">
                     <span className="text-white font-bold text-xl">TGP</span>
                   </div>
-                  <span className="ml-3 text-white font-semibold">Menu</span>
+                  <span id="mobile-menu-title" className="ml-3 text-white font-semibold">Menu</span>
                 </div>
                 <button
                   onClick={onClose}
                   className="p-2 rounded-lg hover:bg-white/10 transition-colors"
-                  aria-label="Close menu"
+                  aria-label="Close navigation menu"
                 >
-                  <HiX className="w-6 h-6 text-white" />
+                  <HiX className="w-6 h-6 text-white" aria-hidden="true" />
                 </button>
               </div>
 
               {/* Navigation Links */}
-              <nav className="flex-1 overflow-y-auto py-8 px-6">
-                <ul className="space-y-2">
+              <nav className="flex-1 overflow-y-auto py-8 px-6" aria-label="Mobile navigation">
+                <ul className="space-y-2" role="menu">
                   {navLinks.map((link, index) => (
                     <motion.li
                       key={link.id}
@@ -134,6 +135,7 @@ const MobileMenu = ({ isOpen, onClose, navLinks, activeSection, onNavigate }) =>
                       variants={linkVariants}
                       initial="closed"
                       animate="open"
+                      role="none"
                     >
                       <button
                         onClick={() => handleLinkClick(link.id)}
@@ -142,6 +144,9 @@ const MobileMenu = ({ isOpen, onClose, navLinks, activeSection, onNavigate }) =>
                             ? 'bg-gradient-to-r from-primary-500/20 to-secondary-500/20 text-white border border-primary-500/30'
                             : 'text-dark-300 hover:text-white hover:bg-white/5'
                         }`}
+                        role="menuitem"
+                        aria-label={`Navigate to ${link.label} section`}
+                        aria-current={activeSection === link.id ? 'page' : undefined}
                       >
                         <span className="text-lg font-medium">{link.label}</span>
                       </button>

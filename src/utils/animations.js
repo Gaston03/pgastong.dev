@@ -1,6 +1,13 @@
 /**
  * Framer Motion animation variants and utilities
  * Reusable animation configurations for consistent motion design
+ * 
+ * PERFORMANCE NOTES:
+ * - All animations use GPU-accelerated properties (transform, opacity, scale)
+ * - Avoid animating: width, height, top, left, margin, padding
+ * - Use transform (translateX/Y, scale, rotate) instead
+ * - Keep animations under 300ms for snappy feel, 600ms max for entrances
+ * - Limit concurrent animations to maintain 60fps
  */
 
 // ============================================

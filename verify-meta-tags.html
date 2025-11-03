@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Tags Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #3B82F6;
+            border-bottom: 3px solid #8B5CF6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #1E293B;
+            margin-top: 30px;
+        }
+        .meta-group {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #3B82F6;
+        }
+        .meta-tag {
+            font-family: 'Courier New', monospace;
+            background: #e2e8f0;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        .tag-name {
+            color: #8B5CF6;
+            font-weight: bold;
+        }
+        .tag-value {
+            color: #1E293B;
+        }
+        .preview {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .preview-title {
+            color: #1E293B;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .preview-description {
+            color: #64748B;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .preview-url {
+            color: #3B82F6;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .preview-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: 1px solid #e2e8f0;
+        }
+        .checklist {
+            background: #f0fdf4;
+            border-left: 4px solid #10B981;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .checklist li {
+            margin: 8px 0;
+        }
+        .tool-link {
+            display: inline-block;
+            background: #3B82F6;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 5px;
+        }
+        .tool-link:hover {
+            background: #2563EB;
+        }
+        .warning {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Meta Tags Verification Guide</h1>
+        <p>This page helps you verify that all SEO and social media meta tags are properly implemented.</p>
+
+        <h2>📋 Implemented Meta Tags</h2>
+
+        <div class="meta-group">
+            <h3>Primary Meta Tags</h3>
+            <div class="meta-tag">
+                <span class="tag-name">Title:</span> 
+                <span class="tag-value">Tonguino Gaston Pascal - Software Engineer Portfolio</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">Description:</span> 
+                <span class="tag-value">Software Engineer Student specializing in full-stack development, mobile applications, and real-time communication systems...</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">Keywords:</span> 
+                <span class="tag-value">software engineer, full-stack developer, mobile developer, React, Flutter, Spring Boot...</span>
+            </div>
+        </div>
+
+        <div class="meta-group">
+            <h3>Open Graph Tags (Facebook, LinkedIn)</h3>
+            <div class="meta-tag">
+                <span class="tag-name">og:type:</span> 
+                <span class="tag-value">website</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">og:title:</span> 
+                <span class="tag-value">Tonguino Gaston Pascal - Software Engineer Portfolio</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">og:description:</span> 
+                <span class="tag-value">Software Engineer Student specializing in full-stack development...</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">og:image:</span> 
+                <span class="tag-value">https://tonguino-portfolio.vercel.app/og-image.svg (1200x630px)</span>
+            </div>
+        </div>
+
+        <div class="meta-group">
+            <h3>Twitter Card Tags</h3>
+            <div class="meta-tag">
+                <span class="tag-name">twitter:card:</span> 
+                <span class="tag-value">summary_large_image</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">twitter:title:</span> 
+                <span class="tag-value">Tonguino Gaston Pascal - Software Engineer Portfolio</span>
+            </div>
+            <div class="meta-tag">
+                <span class="tag-name">twitter:image:</span> 
+                <span class="tag-value">https://tonguino-portfolio.vercel.app/og-image.svg</span>
+            </div>
+        </div>
+
+        <h2>👁️ Social Media Preview</h2>
+        <p>This is how your portfolio will appear when shared on social media:</p>
+
+        <div class="preview">
+            <div class="preview-url">tonguino-portfolio.vercel.app</div>
+            <div class="preview-title">Tonguino Gaston Pascal - Software Engineer Portfolio</div>
+            <div class="preview-description">
+                Software Engineer Student specializing in full-stack development, mobile applications, and real-time communication systems. Experienced with React, Flutter, Spring Boot, Firebase, and more.
+            </div>
+            <img src="/og-image.svg" alt="OG Image Preview" class="preview-image" onerror="this.style.display='none'">
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Important:</strong> Before deploying, update the placeholder URL <code>https://tonguino-portfolio.vercel.app/</code> with your actual deployed URL in the following tags:
+            <ul>
+                <li>og:url</li>
+                <li>og:image (full URL)</li>
+                <li>twitter:url</li>
+                <li>twitter:image (full URL)</li>
+                <li>canonical link</li>
+            </ul>
+        </div>
+
+        <h2>✅ Verification Checklist</h2>
+        <div class="checklist">
+            <ul>
+                <li>✓ Title tag is descriptive and under 60 characters</li>
+                <li>✓ Meta description is compelling and under 160 characters</li>
+                <li>✓ Keywords are relevant and not stuffed</li>
+                <li>✓ Open Graph tags are complete</li>
+                <li>✓ Twitter Card tags are complete</li>
+                <li>✓ Favicon is created and linked</li>
+                <li>✓ OG image is 1200x630px</li>
+                <li>✓ Canonical URL is set</li>
+                <li>✓ Theme color is defined</li>
+                <li>✓ Robots meta tag allows indexing</li>
+            </ul>
+        </div>
+
+        <h2>🔧 Testing Tools</h2>
+        <p>Use these tools to verify your meta tags after deployment:</p>
+        
+        <a href="https://developers.facebook.com/tools/debug/" target="_blank" class="tool-link">
+            Facebook Sharing Debugger
+        </a>
+        <a href="https://cards-dev.twitter.com/validator" target="_blank" class="tool-link">
+            Twitter Card Validator
+        </a>
+        <a href="https://www.opengraph.xyz/" target="_blank" class="tool-link">
+            OpenGraph.xyz
+        </a>
+        <a href="https://search.google.com/test/rich-results" target="_blank" class="tool-link">
+            Google Rich Results Test
+        </a>
+
+        <h2>📝 Next Steps</h2>
+        <ol>
+            <li>Deploy your portfolio to your hosting platform</li>
+            <li>Update all placeholder URLs with your actual domain</li>
+            <li>Test with Facebook Sharing Debugger (click "Scrape Again" to refresh cache)</li>
+            <li>Test with Twitter Card Validator</li>
+            <li>Run a Lighthouse audit to verify SEO score</li>
+            <li>Share on social media to see the preview in action</li>
+        </ol>
+
+        <div class="meta-group">
+            <h3>📄 Files Created</h3>
+            <ul>
+                <li><code>/public/favicon.svg</code> - Portfolio favicon with TG initials</li>
+                <li><code>/public/og-image.svg</code> - Social media preview image (1200x630px)</li>
+                <li><code>/index.html</code> - Updated with comprehensive meta tags</li>
+                <li><code>/SEO_META_TAGS.md</code> - Complete documentation</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -8,6 +8,17 @@ const ProjectCard = ({ project, onViewDetails }) => {
   const { t } = useTranslation();
   const { cardRef, tilt } = useCardTilt(8);
 
+  const handleClick = () => {
+    onViewDetails(project);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onViewDetails(project);
+    }
+  };
+
   return (
     <motion.div
       ref={cardRef}
@@ -19,7 +30,11 @@ const ProjectCard = ({ project, onViewDetails }) => {
         transition: 'transform 0.1s ease-out',
       }}
       className="group relative bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 cursor-pointer touch-manipulation"
-      onClick={() => onViewDetails(project)}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`View details for ${project.title} project`}
     >
       {/* Project Image */}
       <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden bg-slate-900">
@@ -41,6 +56,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
           whileHover={{ opacity: 1 }}
           transition={{ duration: 0.3 }}
           className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent flex items-center justify-center pointer-events-none"
+          aria-hidden="true"
         >
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -92,7 +108,7 @@ const ProjectCard = ({ project, onViewDetails }) => {
       </div>
 
       {/* Decorative Corner Accent */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
     </motion.div>
   );
 };

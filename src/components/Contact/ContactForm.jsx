@@ -161,19 +161,24 @@ export default function ContactForm() {
   };
 
   // Input field component
-  const InputField = ({ name, type = 'text', icon: Icon, placeholder }) => (
+  const InputField = ({ name, type = 'text', icon: Icon, placeholder, label }) => (
     <div className="relative">
+      <label htmlFor={name} className="sr-only">{label || placeholder}</label>
       <div className="relative">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-dark-400">
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-dark-400" aria-hidden="true">
           <Icon className="w-5 h-5" />
         </div>
         <input
+          id={name}
           type={type}
           name={name}
           value={formData[name]}
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder={placeholder}
+          aria-label={label || placeholder}
+          aria-invalid={touched[name] && errors[name] ? 'true' : 'false'}
+          aria-describedby={touched[name] && errors[name] ? `${name}-error` : undefined}
           className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all duration-200 ${
             touched[name] && errors[name]
               ? 'border-red-500 focus:ring-red-500/50'
@@ -183,9 +188,11 @@ export default function ContactForm() {
       </div>
       {touched[name] && errors[name] && (
         <motion.p
+          id={`${name}-error`}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="mt-1 text-sm text-red-400"
+          role="alert"
         >
           {errors[name]}
         </motion.p>
@@ -201,12 +208,13 @@ export default function ContactForm() {
       transition={{ duration: 0.6 }}
       className="glass p-6 md:p-8 rounded-2xl"
     >
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6" aria-label="Contact form">
         {/* Name Field */}
         <InputField
           name="name"
           icon={HiUser}
           placeholder={t('contact.form.namePlaceholder')}
+          label={t('contact.form.nameLabel', 'Your name')}
         />
 
         {/* Email Field */}
@@ -215,6 +223,7 @@ export default function ContactForm() {
           type="email"
           icon={HiMail}
           placeholder={t('contact.form.emailPlaceholder')}
+          label={t('contact.form.emailLabel', 'Your email address')}
         />
 
         {/* Subject Field */}
@@ -222,21 +231,27 @@ export default function ContactForm() {
           name="subject"
           icon={HiPencil}
           placeholder={t('contact.form.subjectPlaceholder')}
+          label={t('contact.form.subjectLabel', 'Message subject')}
         />
 
         {/* Message Field */}
         <div className="relative">
+          <label htmlFor="message" className="sr-only">{t('contact.form.messageLabel', 'Your message')}</label>
           <div className="relative">
-            <div className="absolute left-4 top-4 text-dark-400">
+            <div className="absolute left-4 top-4 text-dark-400" aria-hidden="true">
               <HiChatAlt2 className="w-5 h-5" />
             </div>
             <textarea
+              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               onBlur={handleBlur}
               placeholder={t('contact.form.messagePlaceholder')}
               rows={5}
+              aria-label={t('contact.form.messageLabel', 'Your message')}
+              aria-invalid={touched.message && errors.message ? 'true' : 'false'}
+              aria-describedby={touched.message && errors.message ? 'message-error' : undefined}
               className={`w-full pl-12 pr-4 py-3 bg-dark-800/50 border rounded-lg text-white placeholder-dark-400 focus:outline-none focus:ring-2 transition-all duration-200 resize-none ${
                 touched.message && errors.message
                   ? 'border-red-500 focus:ring-red-500/50'
@@ -246,9 +261,11 @@ export default function ContactForm() {
           </div>
           {touched.message && errors.message && (
             <motion.p
+              id="message-error"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="mt-1 text-sm text-red-400"
+              role="alert"
             >
               {errors.message}
             </motion.p>
@@ -266,6 +283,7 @@ export default function ContactForm() {
               ? 'bg-dark-700 text-dark-400 cursor-not-allowed'
               : 'btn-primary'
           }`}
+          aria-label={isSubmitting ? t('contact.form.sending') : t('contact.form.submit')}
         >
           {isSubmitting ? (
             <>
@@ -274,7 +292,7 @@ export default function ContactForm() {
             </>
           ) : (
             <>
-              <HiMail className="w-5 h-5" />
+              <HiMail className="w-5 h-5" aria-hidden="true" />
               <span>{t('contact.form.submit')}</span>
             </>
           )}
@@ -286,6 +304,8 @@ export default function ContactForm() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="p-4 bg-accent-500/20 border border-accent-500/50 rounded-lg text-accent-400 text-center"
+            role="status"
+            aria-live="polite"
           >
             <div className="flex items-center justify-center gap-2">
               <motion.svg
@@ -296,6 +316,7 @@ export default function ContactForm() {
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -314,12 +335,15 @@ export default function ContactForm() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-center"
+            role="alert"
+            aria-live="assertive"
           >
             <p className="font-semibold">{t('contact.form.error')}</p>
             <button
               type="button"
               onClick={() => setSubmitStatus(null)}
               className="mt-2 text-sm underline hover:text-red-300 transition-colors"
+              aria-label="Retry sending message"
             >
               {t('common.retry')}
             </button>
