@@ -1,32 +1,89 @@
 import './App.css';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './components/Navigation/LanguageSwitcher';
+import Navbar from './components/Navigation/Navbar';
+import Hero from './components/Hero/Hero';
 
 function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen">
-      <div className="fixed top-4 right-4 z-50">
-        <LanguageSwitcher />
-      </div>
+    <div className="min-h-screen bg-dark-900">
+      <Navbar />
       
-      <div className="section-container py-20">
-        <h1 className="text-5xl font-bold gradient-text mb-4">
-          {t('hero.greeting')} Tonguino Gaston Pascal
-        </h1>
-        <p className="text-xl mb-8" style={{ color: 'var(--color-dark-300)' }}>
-          {t('hero.title')}
-        </p>
-        <div className="flex gap-4">
-          <button className="btn-primary">
-            {t('hero.cta.viewWork')}
-          </button>
-          <button className="btn-outline">
-            {t('hero.cta.downloadCV')}
-          </button>
+      {/* Hero Section */}
+      <Hero />
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen flex items-center justify-center px-4 bg-dark-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('about.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            {t('about.description')}
+          </p>
         </div>
-      </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('experience.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            Experience content will be added here
+          </p>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="min-h-screen flex items-center justify-center px-4 bg-dark-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('skills.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            Skills content will be added here
+          </p>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('projects.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            Projects content will be added here
+          </p>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="min-h-screen flex items-center justify-center px-4 bg-dark-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('education.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            Education content will be added here
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            {t('contact.title')}
+          </h2>
+          <p className="text-lg text-dark-300">
+            {t('contact.subtitle')}
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
