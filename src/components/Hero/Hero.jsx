@@ -22,7 +22,7 @@ export default function Hero() {
   };
 
   const handleDownloadCV = () => {
-    window.open('/resume.pdf', '_blank');
+    window.open('/application-cv.pdf', '_blank');
   };
 
   const handleScrollDown = () => {
@@ -200,7 +200,7 @@ export default function Hero() {
               {/* Image Container with Glassmorphism */}
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden glass border-4 border-primary-500/30">
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/profile.svg"
                   alt="Tonguino Gaston Pascal"
                   className="w-full h-full object-cover"
                   onError={(e) => {

@@ -1,5 +1,6 @@
 import './App.css';
 import { useTranslation } from 'react-i18next';
+import ScrollProgress from './components/common/ScrollProgress';
 import Navbar from './components/Navigation/Navbar';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
@@ -15,6 +16,10 @@ function App() {
 
   return (
     <div className="min-h-screen bg-dark-900">
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
+      
+      {/* Navigation */}
       <Navbar />
       
       {/* Hero Section */}
