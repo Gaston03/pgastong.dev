@@ -8,6 +8,7 @@ import SkillsGrid from './components/Skills/SkillsGrid';
 import ProjectsGallery from './components/Projects/ProjectsGallery';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const { t } = useTranslation();
@@ -43,6 +44,9 @@ function App() {
 
       {/* Contact Section */}
       <Contact />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
