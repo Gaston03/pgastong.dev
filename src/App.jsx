@@ -11,6 +11,7 @@ import ProjectsGallery from './components/Projects/ProjectsGallery';
 import Education from './components/Education/Education';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const { t } = useTranslation();
@@ -67,6 +68,8 @@ function App() {
 
       {/* Footer */}
       <Footer />
+
+      <Analytics />
     </div>
   );
 }
