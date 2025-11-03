@@ -61,7 +61,7 @@ export default function ContactInfo() {
   ];
 
   const handleDownloadCV = () => {
-    window.open('/application-cv.pdf', '_blank');
+    window.open('application-cv.pdf', '_blank');
   };
 
   return (

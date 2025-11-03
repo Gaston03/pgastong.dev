@@ -27,7 +27,7 @@ export default function Hero() {
   };
 
   const handleDownloadCV = () => {
-    window.open('/application-cv.pdf', '_blank');
+    window.open('application-cv.pdf', '_blank');
   };
 
   const handleScrollDown = () => {
