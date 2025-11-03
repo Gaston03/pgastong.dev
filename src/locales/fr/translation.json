@@ -1,0 +1,116 @@
+{
+  "nav": {
+    "about": "À propos",
+    "experience": "Expérience",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "education": "Formation",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "title": "Étudiant Ingénieur Logiciel",
+    "description": "Passionné par la création d'applications évolutives et de systèmes de communication en temps réel. Expérimenté en développement full-stack, applications mobiles et technologies cloud.",
+    "cta": {
+      "viewWork": "Voir mes projets",
+      "downloadCV": "Télécharger CV"
+    },
+    "scrollIndicator": "Défiler pour explorer"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "description": "Je suis un étudiant ingénieur logiciel passionné avec une vaste expérience en développement full-stack, applications mobiles et systèmes de communication en temps réel. Je m'épanouis en résolvant des problèmes complexes et en créant des solutions innovantes qui ont un réel impact.",
+    "quickFacts": {
+      "title": "Informations rapides",
+      "location": "Localisation",
+      "locationValue": "Rabat, Maroc",
+      "age": "Âge",
+      "nationality": "Nationalité",
+      "nationalityValue": "Marocain",
+      "status": "Statut",
+      "statusValue": "Disponible pour opportunités"
+    }
+  },
+  "experience": {
+    "title": "Expérience professionnelle",
+    "current": "Présent",
+    "learnMore": "En savoir plus",
+    "showLess": "Voir moins",
+    "achievements": "Réalisations clés",
+    "responsibilities": "Responsabilités",
+    "technologies": "Technologies utilisées"
+  },
+  "skills": {
+    "title": "Compétences & Technologies",
+    "categories": {
+      "frontend": "Développement Frontend",
+      "backend": "Développement Backend",
+      "mobile": "Développement Mobile",
+      "cloud": "Cloud & Base de données",
+      "tools": "Outils & DevOps"
+    },
+    "proficiency": "Maîtrise",
+    "yearsExperience": "ans d'expérience"
+  },
+  "projects": {
+    "title": "Projets en vedette",
+    "filterAll": "Tous",
+    "filterFullStack": "Full-Stack",
+    "filterMobile": "Mobile",
+    "filterRealTime": "Temps réel",
+    "filterSaaS": "SaaS",
+    "viewDetails": "Voir les détails",
+    "closeModal": "Fermer",
+    "features": "Fonctionnalités clés",
+    "technologiesUsed": "Technologies utilisées",
+    "company": "Entreprise"
+  },
+  "education": {
+    "title": "Formation",
+    "degree": "Diplôme",
+    "institution": "Institution",
+    "duration": "Durée"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "subtitle": "Vous avez un projet en tête ou souhaitez collaborer ? N'hésitez pas à me contacter !",
+    "form": {
+      "name": "Votre nom",
+      "namePlaceholder": "Jean Dupont",
+      "email": "Votre email",
+      "emailPlaceholder": "jean@exemple.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Demande de projet",
+      "message": "Message",
+      "messagePlaceholder": "Parlez-moi de votre projet...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Échec de l'envoi du message. Veuillez réessayer.",
+      "required": "Ce champ est requis",
+      "invalidEmail": "Veuillez entrer une adresse email valide"
+    },
+    "info": {
+      "title": "Informations de contact",
+      "email": "Email",
+      "phone": "Téléphone",
+      "location": "Localisation",
+      "social": "Réseaux sociaux",
+      "downloadCV": "Télécharger le CV"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Tonguino Gaston Pascal. Tous droits réservés.",
+    "builtWith": "Créé avec React & Tailwind CSS",
+    "backToTop": "Retour en haut"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "retry": "Réessayer",
+    "close": "Fermer",
+    "readMore": "Lire la suite",
+    "showMore": "Voir plus",
+    "showLess": "Voir moins"
+  }
+}
