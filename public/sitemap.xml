@@ -6,7 +6,7 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/</loc>
+    <loc>https://pgastong-dev.vercel.app/</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
   
   <!-- About Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#about</loc>
+    <loc>https://pgastong-dev.vercel.app/#about</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
   
   <!-- Experience Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#experience</loc>
+    <loc>https://pgastong-dev.vercel.app/#experience</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -30,7 +30,7 @@
   
   <!-- Skills Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#skills</loc>
+    <loc>https://pgastong-dev.vercel.app/#skills</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
   
   <!-- Projects Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#projects</loc>
+    <loc>https://pgastong-dev.vercel.app/#projects</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -46,7 +46,7 @@
   
   <!-- Education Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#education</loc>
+    <loc>https://pgastong-dev.vercel.app/#education</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
@@ -54,10 +54,10 @@
   
   <!-- Contact Section -->
   <url>
-    <loc>https://tonguino-portfolio.vercel.app/#contact</loc>
+    <loc>https://pgastong-dev.vercel.app/#contact</loc>
     <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
-</urlset>
+</u
