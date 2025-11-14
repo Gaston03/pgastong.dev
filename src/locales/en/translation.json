@@ -142,7 +142,7 @@
         "longDescription": "A comprehensive real-time communication platform featuring high-quality audio/video calls powered by Agora SDK. The application includes a secure subscription management system integrated with Stripe, enabling monetization strategies. Built with Flutter for cross-platform compatibility, the app provides seamless user experience with features like push notifications, user authentication, and cloud-based data synchronization through Firebase.",
         "features": [
           "Real-time audio/video calls with HD quality",
-          "Secure subscription management with Stripe integration",
+         "Secure subscription management with Stripe integration",
           "Push notifications for incoming calls and messages",
           "User authentication and profile management",
           "Cloud-based data synchronization",

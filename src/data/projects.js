@@ -47,7 +47,7 @@ export const projects = [
     descriptionKey: "projects.items.parking.description",
     longDescriptionKey: "projects.items.parking.longDescription",
     featuresKey: "projects.items.parking.features",
-    image: "/images/projects/smart-parking.svg",
+    image: "/images/projects/placedy.png",
     technologies: ["Android Studio", "Java", "Cloud Functions", "Firebase", "Google Maps API"],
     category: ["mobile", "full-stack"],
     company: "SUPMTI",
