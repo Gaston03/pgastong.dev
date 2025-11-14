@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FiArrowRight } from 'react-icons/fi';
+import { FiArrowRight, FiExternalLink } from 'react-icons/fi';
 import ImageWithLoader from '../common/ImageWithLoader';
 import { useCardTilt } from '../../hooks/useCardTilt';
 
@@ -72,11 +72,14 @@ const ProjectCard = ({ project, onViewDetails }) => {
 
       {/* Project Info */}
       <div className="p-4 sm:p-5 md:p-6">
-        {/* Company Badge */}
-        <div className="mb-2 sm:mb-3">
+        {/* Company Badge and External Link Icon */}
+        <div className="mb-2 sm:mb-3 flex items-center justify-between">
           <span className="inline-block px-2.5 sm:px-3 py-1 text-xs font-medium bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">
             {project.company}
           </span>
+          {project.url && (
+            <FiExternalLink className="w-4 h-4 text-slate-400 group-hover:text-blue-400 transition-colors duration-300" />
+          )}
         </div>
 
         {/* Title */}

@@ -153,7 +153,7 @@ export default function Hero() {
               {/* Image Container with Glassmorphism */}
               <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 rounded-full overflow-hidden glass border-4 border-primary-500/30">
                 <ImageWithLoader
-                  src="/images/profile.svg"
+                  src="/images/profile.png"
                   alt="Profile photo of Tonguino Gaston Pascal, Software Engineer"
                   fallbackSrc="https://via.placeholder.com/400x400/3B82F6/FFFFFF?text=TGP"
                   className="rounded-full"

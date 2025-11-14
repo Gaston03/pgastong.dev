@@ -11,7 +11,7 @@ export const experiences = [
     current: true,
     achievementsKey: "experience.companies.bhitech.achievements",
     responsibilitiesKey: "experience.companies.bhitech.responsibilities",
-    technologies: ["Flutter", "Agora SDK", "Stripe SDK", "Firebase", "Cloud Functions"],
+    technologies: ["Flutter", "Agora SDK", "Stripe", "ReactJs", "Firebase", "Cloud Functions"],
     color: "#3B82F6" // Blue accent
   },
   {

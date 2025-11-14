@@ -43,14 +43,18 @@
     "technologies": "Technologies Used",
     "companies": {
       "bhitech": {
-        "role": "Software Engineer",
+        "role": "Software Engineer & Code Reviewer",
         "achievements": [
           "Developed and deployed real-time audio/video communication and a secure subscription system",
-          "Enhanced user engagement and supported the app's monetization strategy"
+          "Enhanced user engagement and supported the app's monetization strategy",
+          "Conducted comprehensive code reviews and resolved critical bugs on Spider-Space platform, improving system stability and code quality",
+          "Contributed to MineLogX AI open-source project by developing and optimizing the contact form functionality"
         ],
         "responsibilities": [
           "Designed and optimized frontend and backend features for scalable real-time communication",
-          "Collaborated with product teams to enhance user experience and ensure smooth integration of subscription workflows"
+          "Collaborated with product teams to enhance user experience and ensure smooth integration of subscription workflows",
+          "Performed thorough code reviews on Spider-Space platform, identifying and fixing bugs while ensuring adherence to best practices",
+          "Developed and maintained contact form features for MineLogX AI platform using React and Firebase"
         ]
       },
       "bynemedia": {
@@ -130,6 +134,7 @@
     "features": "Key Features",
     "technologiesUsed": "Technologies Used",
     "company": "Company",
+    "visitWebsite": "Visit Website",
     "items": {
       "rtc": {
         "title": "Real-Time Communication Platform",
@@ -184,6 +189,34 @@
           "Navigation to reserved parking spots",
           "User-friendly mobile interface",
           "Push notifications for reservations"
+        ]
+      },
+      "minelogx": {
+        "title": "MineLogX AI Contact Form",
+        "description": "Open-source contribution to AI platform's contact form with email API integration",
+        "longDescription": "An open-source contribution to MineLogX AI, an innovative artificial intelligence platform. The project focused on developing and optimizing the contact form functionality to enhance user communication capabilities. Built with ReactJs for a responsive and intuitive user interface, the contact form integrates with a custom email API hosted on AWS EC2 for reliable message delivery. The implementation ensures seamless communication between users and the platform while maintaining high performance and security standards. Firebase integration provides real-time data synchronization and user authentication.",
+        "features": [
+          "Responsive contact form with real-time validation",
+          "Email API integration hosted on AWS EC2",
+          "Firebase authentication and data management",
+          "Form validation and error handling",
+          "Optimized user experience with intuitive design",
+          "Secure message delivery system",
+          "Real-time feedback for form submissions"
+        ]
+      },
+      "spiderspace": {
+        "title": "Spider-Space Platform",
+        "description": "Code review and bug fixing for web platform with payment integration",
+        "longDescription": "A comprehensive code review and debugging project for Spider-Space, a sophisticated web platform. The work involved conducting thorough code reviews to identify and resolve critical bugs, improving overall system stability and code quality. The platform leverages ReactJs for a dynamic and responsive frontend experience, integrates Stripe for secure payment processing, and utilizes Firebase Hosting for reliable deployment and hosting. The project focused on enhancing code maintainability, implementing best practices, and ensuring the platform's robustness through systematic bug identification and resolution.",
+        "features": [
+          "Comprehensive code review and quality assurance",
+          "Critical bug identification and resolution",
+          "Stripe payment integration optimization",
+          "Firebase Hosting deployment and management",
+          "Code refactoring for improved maintainability",
+          "Performance optimization and debugging",
+          "Implementation of coding best practices"
         ]
       }
     }

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import { FiX, FiCheckCircle } from 'react-icons/fi';
+import { FiX, FiCheckCircle, FiExternalLink } from 'react-icons/fi';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   const { t } = useTranslation();
@@ -189,7 +189,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 </div>
 
                 {/* Technologies Used */}
-                <div>
+                <div className="mb-8">
                   <h3 className="text-xl font-bold text-white mb-4">
                     {t('projects.technologiesUsed')}
                   </h3>
@@ -207,6 +207,23 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     ))}
                   </div>
                 </div>
+
+                {/* Visit Website Button */}
+                {project.url && (
+                  <div className="flex justify-center">
+                    <motion.a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                    >
+                      <FiExternalLink className="w-5 h-5" />
+                      {t('projects.visitWebsite')}
+                    </motion.a>
+                  </div>
+                )}
               </div>
             </div>
           </motion.div>

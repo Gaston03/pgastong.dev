@@ -43,14 +43,18 @@
     "technologies": "Technologies utilisées",
     "companies": {
       "bhitech": {
-        "role": "Ingénieur Logiciel",
+        "role": "Ingénieur Logiciel & Réviseur de Code",
         "achievements": [
           "Développé et déployé un système de communication audio/vidéo en temps réel et un système d'abonnement sécurisé",
-          "Amélioré l'engagement des utilisateurs et soutenu la stratégie de monétisation de l'application"
+          "Amélioré l'engagement des utilisateurs et soutenu la stratégie de monétisation de l'application",
+          "Effectué des revues de code et résolu des bugs critiques sur la plateforme Spider-Space, améliorant la stabilité du système et la qualité du code",
+          "Contribué au projet open-source MineLogX AI en développant et optimisant les fonctionnalités du formulaire de contact"
         ],
         "responsibilities": [
           "Conçu et optimisé les fonctionnalités frontend et backend pour une communication en temps réel évolutive",
-          "Collaboré avec les équipes produit pour améliorer l'expérience utilisateur et assurer une intégration fluide des flux d'abonnement"
+          "Collaboré avec les équipes produit pour améliorer l'expérience utilisateur et assurer une intégration fluide des flux d'abonnement",
+          "Réalisé des revues de code rigoureuses sur la plateforme Spider-Space, identifiant et corrigeant les bugs tout en garantissant le respect des meilleures pratiques",
+          "Développé et maintenu les fonctionnalités du formulaire de contact pour la plateforme MineLogX AI en utilisant React et Firebase"
         ]
       },
       "bynemedia": {
@@ -130,6 +134,7 @@
     "features": "Fonctionnalités clés",
     "technologiesUsed": "Technologies utilisées",
     "company": "Entreprise",
+    "visitWebsite": "Visiter le site",
     "items": {
       "rtc": {
         "title": "Plateforme de Communication en Temps Réel",
@@ -184,6 +189,34 @@
           "Navigation vers les places de stationnement réservées",
           "Interface mobile conviviale",
           "Notifications push pour les réservations"
+        ]
+      },
+      "minelogx": {
+        "title": "Formulaire de Contact MineLogX AI",
+        "description": "Contribution open-source au formulaire de contact de la plateforme IA avec intégration d'API email",
+        "longDescription": "Une contribution open-source à MineLogX AI, une plateforme innovante d'intelligence artificielle. Le projet s'est concentré sur le développement et l'optimisation des fonctionnalités du formulaire de contact pour améliorer les capacités de communication des utilisateurs. Construit avec ReactJs pour une interface utilisateur réactive et intuitive, le formulaire de contact s'intègre avec une API email personnalisée hébergée sur AWS EC2 pour une livraison fiable des messages. L'implémentation assure une communication transparente entre les utilisateurs et la plateforme tout en maintenant des normes élevées de performance et de sécurité. L'intégration Firebase fournit une synchronisation des données en temps réel et une authentification des utilisateurs.",
+        "features": [
+          "Formulaire de contact réactif avec validation en temps réel",
+          "Intégration d'API email hébergée sur AWS EC2",
+          "Authentification Firebase et gestion des données",
+          "Validation de formulaire et gestion des erreurs",
+          "Expérience utilisateur optimisée avec design intuitif",
+          "Système de livraison de messages sécurisé",
+          "Retour en temps réel pour les soumissions de formulaire"
+        ]
+      },
+      "spiderspace": {
+        "title": "Plateforme Spider-Space",
+        "description": "Revue de code et correction de bugs pour plateforme web avec intégration de paiement",
+        "longDescription": "Un projet complet de revue de code et de débogage pour Spider-Space, une plateforme web sophistiquée. Le travail a impliqué la réalisation de revues de code approfondies pour identifier et résoudre les bugs critiques, améliorant la stabilité globale du système et la qualité du code. La plateforme exploite ReactJs pour une expérience frontend dynamique et réactive, intègre Stripe pour un traitement de paiement sécurisé, et utilise Firebase Hosting pour un déploiement et un hébergement fiables. Le projet s'est concentré sur l'amélioration de la maintenabilité du code, la mise en œuvre des meilleures pratiques, et l'assurance de la robustesse de la plateforme grâce à l'identification et à la résolution systématiques des bugs.",
+        "features": [
+          "Revue de code complète et assurance qualité",
+          "Identification et résolution de bugs critiques",
+          "Optimisation de l'intégration de paiement Stripe",
+          "Déploiement et gestion Firebase Hosting",
+          "Refactorisation du code pour une meilleure maintenabilité",
+          "Optimisation des performances et débogage",
+          "Mise en œuvre des meilleures pratiques de codage"
         ]
       }
     }
