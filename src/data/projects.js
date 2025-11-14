@@ -51,7 +51,7 @@ export const projects = [
     technologies: ["Android Studio", "Java", "Cloud Functions", "Firebase", "Google Maps API"],
     category: ["mobile", "full-stack"],
     company: "SUPMTI",
-    url: null
+    url: "https://placedy--karz-60c8b.europe-west4.hosted.app"
   },
   {
     id: 5,
